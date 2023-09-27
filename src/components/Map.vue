@@ -9,7 +9,6 @@ import { useRouter } from 'vue-router';
 const router = useRouter();
 const chart = ref();
 const mapJSON = ref();
-// const mapName = ref();
 const props = defineProps({ name: { default: '中国' }, adcode: { default: '100000' } });
 onMounted(() => {
   axios.get(`https://geo.datav.aliyun.com/areas_v3/bound/${props.adcode}_full.json`).then((res) => {
